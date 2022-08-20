@@ -4,7 +4,7 @@ import { sampleData } from './sampleData';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/SearchBar',
+  title: 'Components/Search Bar',
   component: SearchBar,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
