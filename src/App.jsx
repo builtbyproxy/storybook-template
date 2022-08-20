@@ -17,11 +17,13 @@ function App() {
     setPokemon({ name: pokemon, apiUrl })
   }
 
-  console.log("Found: ", pokemon.name)
-
   return (
     <div className="App">
-      <SearchBar dataToSearch={availablePokemon} handleSubmit={handleSubmit} />
+      {
+        pokemon.name
+          ? <div>Pokemon Loads Here</div>
+          : <SearchBar dataToSearch={availablePokemon} handleSubmit={handleSubmit} />
+      }
     </div>
   )
 }
