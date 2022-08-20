@@ -1,7 +1,7 @@
 import './styles.css'
 import React from "react";
 import FuzzySearch from 'react-fuzzy'
-import { capitalCase } from 'change-case'
+import SearchBarPreview from '../searchBarPreview';
 
 export default function SearchBar(props) {
   function selectResult(selectedResult) {
@@ -19,13 +19,7 @@ export default function SearchBar(props) {
         return state.results.map((val, i) => {
           const style = state.selectedIndex === i ? styles.selectedResultStyle : styles.resultsStyle;
           return (
-            <div
-              key={i}
-              style={style}
-              onClick={() => clickHandler(i)}
-            >
-              {capitalCase(val.name)}
-            </div>
+            <SearchBarPreview key={i} style={style} onClick={() => clickHandler(i)} value={val} />
           );
         });
       }}
